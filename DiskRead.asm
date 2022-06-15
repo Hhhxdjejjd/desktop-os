@@ -19,7 +19,7 @@ BOOT_DSIK:
     db 0
 
 DiskReadErrorString:
-    db 'disk Read Failed',0
+    db 'disk Read Failed', 0
 
 DiskReadFailed:
     mov bx, DiskReadErrorString
