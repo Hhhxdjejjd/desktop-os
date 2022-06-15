@@ -8,6 +8,8 @@ mov sp, bp
 mov bx, teststring
 call printstring
 
+call ReadDisk
+
 jmp $
 
 %include "print.asm"
