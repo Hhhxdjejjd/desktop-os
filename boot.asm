@@ -77,7 +77,7 @@ ypos   db 0
 hexstr db "0123456789ABCDEF"
 outstr16  db '0000', 0
 reg16  dw   0
-msg db "hello world", 13, 10, 0
+msg db "hello world", 0
 
     times 510-($-$$) db 0
     db 0x55
