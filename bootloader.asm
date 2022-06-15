@@ -15,7 +15,7 @@ printstring:
     je .Exit
        mov al, [bx]
        int 0x10
-       int bx
+       inc bx
        jmp .loop
     .Exit:
     ret
