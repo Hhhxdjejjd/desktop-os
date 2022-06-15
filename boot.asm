@@ -56,7 +56,7 @@ printreg16:
    mov si, hexstr
    mov cx, 4
 hexloop:
-   rol, ax, 4
+   rol ax, 4
    mov bx, ax
    and bx, 0x0f
    mov bi, [si + bx]
