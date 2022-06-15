@@ -1,18 +1,20 @@
-mov ah, 0x0e
+[org 0x7c00]
 
-mov al, 'c'
+mov bp, 0x7c00
+mov sp, bp
 
-int 0x10
-
-mov al, 'a'
-
-int 0x10
-
-mov al, 't'
-
-int 0x10
+mov bx, teststring
+call printstring
 
 jmp $
+
+printstring:
+    mov ah, 0x0e
+    mov al, [bx]
+    int 0x10
+    ret
+teststring:
+    db "this is a test", 0
 
 times 510-($-$$) db 0
 
