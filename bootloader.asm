@@ -4,15 +4,11 @@ mov al, 'c'
 
 int 0x10
 
-mov al, 'o'
+mov al, 'a'
 
 int 0x10
 
-mov al, 'o'
-
-int 0x10
-
-mov al,  'l'
+mov al, 't'
 
 int 0x10
 
