@@ -10,8 +10,14 @@ jmp $
 
 printstring:
     mov ah, 0x0e
-    mov al, [bx]
-    int 0x10
+    .loop:
+    cmp [bx], 0
+    je .Exit
+       mov al, [bx]
+       int 0x10
+       int bx
+       jmp .loop
+    .Exit:
     ret
 teststring:
     db "this is a test", 0
