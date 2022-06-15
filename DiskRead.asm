@@ -1,5 +1,5 @@
 
-PROGRAM_SPACE equ
+PROGRAM_SPACE equ 0x7c00
 
 ReadDisk:
     mov bx, PROGRAM_SPACE
@@ -19,7 +19,7 @@ BOOT_DSIK:
     db 0
 
 DiskReadErrorString:
-    db "disk read did not work',
+    db "disk read did not work',0
 
 DiskReadFailed:
     mov bx, DiskReadErrorString
