@@ -23,8 +23,8 @@
 hang:
     jmp hang
 
-dochar:      call cprint 
-sprint:      lobsb
+dochar:    call cprint 
+sprint:    lobsb
    cmp al, 0
    jne dochar
    add byte [ypos], 1
