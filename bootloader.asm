@@ -20,7 +20,7 @@ printstring:
     .Exit:
     ret
 teststring:
-    db "this is a test", 0
+    db "hi im michael", 0
 
 times 510-($-$$) db 0
 
